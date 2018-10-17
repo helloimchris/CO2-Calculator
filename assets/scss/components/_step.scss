@@ -1,0 +1,177 @@
+// Individual Steps
+
+.cement-step {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    animation: 1.2s FadeOut ease-in;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    
+    &.active-step {
+        display: flex;
+        animation: 1.2s FadeIn ease-in;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        
+        .cement-options > div {
+            opacity: 0;
+            animation: 1.2s BounceFadeIn $transition;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+            @include delay(0, 0.3, 3);
+        }
+    }
+    
+    &.previous-step {
+        display: flex;
+        
+        .cement-options > div {
+            opacity: 1;
+            animation: 1.2s BounceFadeOut $transition;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+            @include delay(0, 0.3, 3);
+            
+            .cement-results_box {
+                border: 0;
+                transition: 0.4s all ease-in-out;
+            }
+        }
+    }
+     
+    &.cement-step_one {
+        width: 90%;
+        
+        .cement-text {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .cement-options {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            
+            @include bp-medium {
+                flex-direction: row;
+            }
+        }
+    }
+        
+    &.cement-step_two {
+        width: 90%;
+        
+        .cement-text {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            
+            span {
+                font-size: 22px;
+                line-height: 28px;
+                vertical-align: top;
+                text-transform: capitalize;
+            }
+        }
+        
+        .cement-options {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &.cement-step_three {
+        width: 100%;
+        
+        .cement-text {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+            
+            .cement-increase {
+                line-height: 44px;
+                
+                @include bp-medium {
+                    line-height: 64px; 
+                }
+                
+                span {
+                    font-size: 44px;
+                    line-height: 44px;
+                    vertical-align: baseline;
+                    
+                    @include bp-medium {
+                        font-size: 64px;
+                        line-height: 64px;
+                    }
+                }
+            }
+        }
+        
+        .cement-options {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            padding: 20px;
+            
+            @include bp-medium {
+                flex-direction: row;
+                padding: 0;
+            }
+            
+            .cement-results_box {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-items: center;
+                border-bottom: 2px solid $white;
+                transition: 0.4s all ease-in-out;
+                padding: 20px;
+                
+                @include bp-medium {
+                    border-right: 2px solid $white;
+                    border-bottom: 0;
+                }
+            
+                &:last-child {
+                    border: 0;
+                }
+                
+                .cement-results {
+                    text-align: center;
+                    
+                    .cement-data {
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            }
+        }
+        
+        .cement-restart {
+            width: 100%;
+            margin-top: 40px;
+            text-align: center;
+            
+            a {
+                color: $white;
+            }
+        }
+    }
+}

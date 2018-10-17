@@ -1,0 +1,16 @@
+// Input
+
+input[type=text],
+input[type=number] {
+    width: 340px;
+    background: $white;
+    border: 2px solid $white;
+    padding: 10px 20px;
+    outline: 0;
+    
+    &.cement-error {
+        border: 2px solid $red;
+        animation: 1.2s InputShake ease-in-out;
+        transition: 0.4s all ease-in-out;
+    }
+}

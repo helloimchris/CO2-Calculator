@@ -1,0 +1,20 @@
+// SVG Images
+
+.cement-svg {
+    width: 100px;
+    height: auto;
+    
+    path,
+    rect,
+    polygon {
+        fill: $white;
+    }
+    
+    .opacityOne {
+        opacity: 0.8;
+    }
+    
+    .opacityTwo {
+        opacity: 0.6;
+    }
+}

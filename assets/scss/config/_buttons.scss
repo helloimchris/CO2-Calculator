@@ -1,0 +1,43 @@
+// Buttons
+
+.cement-button {
+	display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background: $lightgreen;
+    margin: 20px;
+    
+    &.cement-button_large {
+        width: 100%;
+        height: 100%;
+        
+        @include bp-medium {
+            width: 240px;
+            height: 240px;
+        }
+        
+        .cement-button_image {
+            text-align: center;
+        }
+    }
+    
+    &.cement-button_small {
+        width: 240px;
+        height: 40px;
+        background: $lightgreen;
+        border: 2px solid $white;
+        
+        a {
+            color: $white;
+        }
+    }
+    
+	&:hover,
+	&:focus {
+        background: darken($lightgreen, 3%);
+        transition: all .4s ease-in-out;
+		outline: 0;
+	}
+}

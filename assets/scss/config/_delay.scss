@@ -1,0 +1,9 @@
+// Delay Animation Mixin
+
+@mixin delay($initDelay, $addDelay, $n) {
+    @for $i from 1 to $n {
+        &:nth-child(#{$i}) {
+            animation-delay: ($initDelay+$i*$addDelay)+s
+        }
+    }
+}

@@ -1,0 +1,72 @@
+// Keyframes
+
+@keyframes BounceFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+        transition-property: transform;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        transition-property: transform;
+    }
+}
+
+@keyframes BounceFadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+        transition-property: transform;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100%);
+        transition-property: transform;
+    }
+}
+
+@keyframes FadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    1% {
+        display: flex;
+        opacity: 0;
+    }
+    100% {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+@keyframes FadeOut {
+    0% {
+        display: flex;
+        opacity: 1;
+    }
+    99% {
+        display: flex;
+        opacity: 0;
+    }
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
+
+@keyframes InputShake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}

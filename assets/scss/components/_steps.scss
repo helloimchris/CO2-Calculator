@@ -1,0 +1,17 @@
+// Step Container
+
+.cement-container {
+    height: 100%;
+    width: 100%;
+    max-width: $site-max-width;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    
+    @include bp-medium {
+        padding: 0;
+    }
+}

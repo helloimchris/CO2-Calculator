@@ -1,0 +1,29 @@
+// Site Settings
+
+$site-max-width:            1400px !default;
+
+// Breakpoints
+
+$breakpoint-small:          480px !default;
+$breakpoint-medium:         720px !default;
+$breakpoint-large:          1080px !default;
+$breakpoint-xlarge:         1400px !default;
+
+// Brand Colours
+
+$white:                     #FFFFFF !default;
+$black:                     #626668 !default;
+$grey:                      #E6E6E6 !default;
+$green:                     #5CAE3E !default;
+$lightgreen:                #7BC152 !default;
+$red:                       #C16752 !default;
+
+// Transition
+
+$transition:                 cubic-bezier(0.68, -0.55, 0.265, 1.55) !default;
+
+// Typography
+
+$primary-font:              'Montserrat';
+$fallback-font:             -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
+$body-font-family:          $primary-font, $fallback-font !default;
